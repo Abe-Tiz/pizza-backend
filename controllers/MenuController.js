@@ -1,6 +1,5 @@
 
 const { addMenuItem, getMenu, deleteMenu } = require("../models/menuModel");
-// const { getMenu } = require("../models/UserModel");
 
 // create menu item
 const createMenuItem = async (req, res) => {

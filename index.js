@@ -27,6 +27,9 @@ app.use("/role", roleRoutes);
 app.use("/order", orderRoutes);
 
 
+app.get("/", async (req, res) => {
+  res.send("Hello ")
+})
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

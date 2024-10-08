@@ -1,6 +1,9 @@
 
-const { addMenuItem, getMenu, deleteMenu } = require("../models/menuModel");
+const { addMenuItem, getMenu, deleteMenu } = require("../models/MenuModel");
 
+const path = require("path");
+const menuModelPath = path.resolve(__dirname, "../models/menuModel");
+const { addMenuItem, getMenu, deleteMenu } = require(menuModelPath);
 // create menu item
 const createMenuItem = async (req, res) => {
   const { name, toppings, price,restaurant_id } = req.body;

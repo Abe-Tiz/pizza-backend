@@ -51,7 +51,7 @@ const getAdmin = async (req, res) => {
     res.status(200).json(admins);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: error.message});
   }
 };
 
@@ -94,7 +94,7 @@ const loginAdmin = async (req, res) => {
      
   } catch (error) {
     console.error("Error logging in admin:", error);
-    return res.status(500).json({ message: "Internal server error" });
+    return res.status(500).json({ message: error.message });
   }
 };
 
@@ -155,7 +155,7 @@ const loginUser = async (req, res) => {
      
   } catch (error) {
     console.error("Error logging in admin:", error);
-    return res.status(500).json({ message: "Internal server error" });
+    return res.status(500).json({ message: error.message });
   }
 };
 
